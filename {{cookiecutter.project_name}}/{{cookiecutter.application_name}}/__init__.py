@@ -81,8 +81,9 @@ def create_app(config_file=None):
     # Importing here to avoid circular import on celery.
     
     # Api blueprint
-
-    app.register_blueprint(api, url_prefix="/api/")
+    
+    # Register an api blueprint if you have one. 
+    # app.register_blueprint(api, url_prefix="/api/")
 
     logger.info("Initialized (colored) logs")
 
